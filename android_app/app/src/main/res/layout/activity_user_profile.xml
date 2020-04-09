@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swiperefresh"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UserProfile"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap on Camera Icon to change Profile Picture"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_margin="16dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/camera_icon"
+                android:layout_margin="16dp"/>
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/xyz"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <EditText
+                android:id="@+id/display_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Display Name"
+                android:layout_alignParentStart="true"/>
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:background="#28A7F4"
+                android:layout_below="@+id/display_name"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:id="@+id/copy_device_token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_save"
+                android:text="Copy Device token to clipboard"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:background="#28A7F4"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:padding="8dp"/>
+
+
+            <Button
+                android:id="@+id/button_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:layout_margin="16dp"
+                android:background="#28A7F4"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+            <ProgressBar
+                android:id="@+id/progressbar2"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
