@@ -21,9 +21,18 @@ while(message_number<10):
     data = {
         'notification':{
             "title":"Test Message",
-            "body":"Message Number {}".format(message_number)
+            "body":"Sample Train Loss:{} Sample Validation Loss:{}".format(message_number,message_number)
         },
         'to':DEVICE_KEY
+    }
+    data = json.dumps(data)
+    r = requests.post(API_ENDPOINT,headers=headers,data=data)
+    data = {
+        'notification':{
+            "title":"Test Message",
+            "body":"Sample Train Loss:{} Sample Validation Loss:{}".format(message_number,message_number)
+        },
+        'to':secrets['DEVICE2_KEY']
     }
     data = json.dumps(data)
     r = requests.post(API_ENDPOINT,headers=headers,data=data)
